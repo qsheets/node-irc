@@ -70,11 +70,12 @@ Client
     this method unless you know what you're doing. Instead, use one of the
     methods below.
 
-.. js:function:: Client.join(channel, callback)
+.. js:function:: Client.join(channel, key, callback)
 
     Joins the specified channel.
 
-    :param string channel: Channel to join
+    :param string channel: Channel(s) to join
+    :param string key: Optional key(s) used to join password protected channels
     :param function callback: Callback to automatically subscribed to the
         `join#channel` event, but removed after the first invocation.  `channel`
         supports multiple JOIN arguments as a space separated string (similar to
@@ -84,12 +85,12 @@ Client
 
     Parts the specified channel.
 
-    :param string channel: Channel to part
+    :param string channel: Channel(s) to part
     :param string message: Optional message to send upon leaving the channel
     :param function callback: Callback to automatically subscribed to the
         `part#channel` event, but removed after the first invocation.
 
-.. js:function:: Client.say(target, message)
+.. js:function:: Client.msg(target, message)
 
     Sends a message to the specified target.
 
@@ -101,8 +102,7 @@ Client
     Sends a CTCP message to the specified target.
     
     :param string target: is either a nickname, or a channel.
-    :param string type: the type of the CTCP message, either "privmsg" for
-        a PRIVMSG or something else for a NOTICE.
+    :param string type: the type of the CTCP message: 'request' or 'reply'
     :param string text: the CTCP message to send.
 
 .. js:function:: Client.action(target, message)
