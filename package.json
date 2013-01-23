@@ -1,11 +1,14 @@
 {
     "name" : "irc",
     "description" : "An IRC client library for node",
-    "version" : "0.3.6",
+    "version" : "0.3.6rfc",
     "author" : "Martyn Smith <martyn@dollyfish.net.nz>",
     "contributors" : [ {
         "name": "xAndy",
         "email": "xandy@hackerspace-bamberg.de"
+    }, {
+        "name": "qsheets",
+        "email": "qsheets095@gmail.com"
     } ],
     "repository" : {
         "type" : "git",
